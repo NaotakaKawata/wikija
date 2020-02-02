@@ -43,7 +43,7 @@ $ rbenv global 1.9.3-p551
 
 ## Python
 
-```python
+```shell
 $ wget https://repo.anaconda.com/archive/Anaconda3-2019.03-Linux-x86_64.sh
 $ bash Anaconda3-2019.03-Linux-x86_64.sh
 $ source ~/.bashrc
@@ -82,13 +82,13 @@ pip install --upgrade git+https://github.com/zalandoresearch/flair.git
 $ pip install mecab
 # Flask
 $ pip install flask
+
+$ bash download_data.sh
 ```
 
  # Train
 
 ```shell
-$ wget https://raw.githubusercontent.com/Hironsan/IOB2Corpus/master/ja.wikipedia.conll
-
 $ python flair_train.py
 ```
 
@@ -98,7 +98,6 @@ $ python flair_train.py
 
 ```bash
 # input sentences in "input.txt" and save
-
 $ bash wikification_flair.sh
 ```
 

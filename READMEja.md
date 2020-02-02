@@ -45,7 +45,7 @@ $ rbenv global 1.9.3-p551
 
 ## Python
 
-```python
+```shell
 $ wget https://repo.anaconda.com/archive/Anaconda3-2019.03-Linux-x86_64.sh
 $ bash Anaconda3-2019.03-Linux-x86_64.sh
 $ source ~/.bashrc
@@ -87,6 +87,8 @@ $ pip install mecab
 
 #ブラウザ操作用ツールFlaskのインストール
 $ pip install flask
+
+$ bash download_data.sh
 ```
 
 
@@ -94,8 +96,6 @@ $ pip install flask
 # 学習
 
 ```shell
-$ wget https://raw.githubusercontent.com/Hironsan/IOB2Corpus/master/ja.wikipedia.conll
-
 $ python flair_train.py
 ```
 
@@ -105,7 +105,6 @@ $ python flair_train.py
 
 ```bash
 #任意の文章をinput.txtに入力して保存
-
 $ bash wikification_flair.sh
 ```
 
