@@ -149,7 +149,7 @@ def write_json(filename, dic):
 if __name__ == '__main__':
     test_path = 'input.txt'
     result_path = 'predict.json'
-    model = SequenceTagger.load('output/best-model.pt')
+    model = SequenceTagger.load('output/final-model.pt')
     input_sentences = []
     sentences = []
     tags = []

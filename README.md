@@ -26,13 +26,18 @@ Used tool of virtual environment are [rbenv](https://github.com/rbenv/rbenv) and
 
 ```ruby
 $ git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
+
 $ git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+
 $ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+
 $ echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+
 $ source ~/.bashrc
 
 # make virtual environment
 $ rbenv install 1.9.3-p551
+
 $ rbenv rehash
 
 # start virtual environment
@@ -45,7 +50,9 @@ $ rbenv global 1.9.3-p551
 
 ```shell
 $ wget https://repo.anaconda.com/archive/Anaconda3-2019.03-Linux-x86_64.sh
+
 $ bash Anaconda3-2019.03-Linux-x86_64.sh
+
 $ source ~/.bashrc
 
 # make virtual environment
@@ -62,27 +69,36 @@ $ source activate wikification
 ```shell
 # Kyotocabinet
 $ wget http://fallabs.com/kyotocabinet/pkg/kyotocabinet-1.2.76.tar.gz
+
 $ tar zxvf kyotocabinet-1.2.76.tar.gz
+
 $ cd kyotocabinet-1.2.76
+
 $ ./configure
+
 $ make
+
 $ sudo make install
 
 # Kyotocabinet-ruby
 $ gem install kyotocabinet-ruby-reanimated
+
 $ gem install mecab
-$ gem install oj
+
+$ gem install oj -v "2.12"
+
 $ gem install levenshtein
 
 # flair
-pip install flair
-# if fail installating
-pip install --upgrade git+https://github.com/zalandoresearch/flair.git
+$ pip install flair
+
 # Mecab
 $ pip install mecab
+
 # Flask
 $ pip install flask
 
+#download model and dataset
 $ bash download_data.sh
 ```
 

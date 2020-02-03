@@ -28,13 +28,18 @@
 
 ```ruby
 $ git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
+
 $ git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+
 $ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+
 $ echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+
 $ source ~/.bashrc
 
 #仮想環境の作成
 $ rbenv install 1.9.3-p551
+
 $ rbenv rehash
 
 #仮想環境の立ち上げ
@@ -47,7 +52,9 @@ $ rbenv global 1.9.3-p551
 
 ```shell
 $ wget https://repo.anaconda.com/archive/Anaconda3-2019.03-Linux-x86_64.sh
+
 $ bash Anaconda3-2019.03-Linux-x86_64.sh
+
 $ source ~/.bashrc
 
 #仮想環境の作成
@@ -64,23 +71,28 @@ $ source activate wikification
 ```shell
 #Kyotocabinetのインストール
 $ wget http://fallabs.com/kyotocabinet/pkg/kyotocabinet-1.2.76.tar.gz
+
 $ tar zxvf kyotocabinet-1.2.76.tar.gz
+
 $ cd kyotocabinet-1.2.76
+
 $ ./configure
+
 $ make
+
 $ sudo make install
 
 #Kyotocabinet-rubyのインストール
 $ gem install kyotocabinet-ruby-reanimated
+
 $ gem install mecab
-$ gem install oj
+
+$ gem install oj -v "2.12"
+
 $ gem install levenshtein
 
 #flairのインストール
-pip install flair
-
-#インストールに失敗する場合
-pip install --upgrade git+https://github.com/zalandoresearch/flair.git
+$ pip install flair
 
 #形態素解析ツールMecabのインストール
 $ pip install mecab
@@ -88,6 +100,7 @@ $ pip install mecab
 #ブラウザ操作用ツールFlaskのインストール
 $ pip install flask
 
+#モデルやデータセットのダウンロード
 $ bash download_data.sh
 ```
 

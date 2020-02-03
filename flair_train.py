@@ -7,11 +7,10 @@ from flair.trainers import ModelTrainer
 columns = {0: 'text', 1: 'ner'}
 data_folder = '.'
 corpus = ColumnCorpus(data_folder, columns,
-                      train_file='ja.wikipedia.conll')
+                      train_file='data/ja.wikipedia.conll')
 
 tag_type = 'ner'
 tag_dictionary = corpus.make_tag_dictionary(tag_type=tag_type)
-print(tag_dictionary.idx2item)
 
 embedding_types = [
     FlairEmbeddings('ja-forward'),
@@ -29,4 +28,5 @@ trainer = ModelTrainer(tagger, corpus)
 trainer.train("output",
               learning_rate=0.1,
               mini_batch_size=32,
-              max_epochs=150)
+              max_epochs=150,
+              embeddings_storage_mode="none")
